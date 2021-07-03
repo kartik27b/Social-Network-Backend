@@ -3,17 +3,13 @@ import { AppController } from './app.controller';
 import { AppService } from './app.service';
 import { PrismaModule } from './prisma/prisma.module';
 import { PostModule } from './post/post.module';
-import { ServeStaticModule } from '@nestjs/serve-static';
-import { join } from 'path';
+import { AuthModule } from './auth/auth.module';
+import { UsersModule } from './users/users.module';
+import { CommentModule } from './comment/comment.module';
+import { RealtimeModule } from './realtime/realtime.module';
 
 @Module({
-  imports: [
-    PrismaModule,
-    PostModule,
-    // ServeStaticModule.forRoot({
-    //   rootPath: join(__dirname, '..', 'public'),
-    // }),
-  ],
+  imports: [AuthModule, UsersModule, PrismaModule, PostModule, CommentModule, RealtimeModule],
   controllers: [AppController],
   providers: [AppService],
 })
