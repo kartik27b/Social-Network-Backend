@@ -12,6 +12,11 @@ Fully typesafe backend with Nest.js framework and Prisma ORM with mysql datebase
 $ yarn install
 ```
 
+## Configuration
+
+Add the database connection url in prisma.schema file
+
+
 ## Running the app
 
 ```bash
