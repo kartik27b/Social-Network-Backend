@@ -14,7 +14,12 @@ $ yarn install
 
 ## Configuration
 
-Add the database connection url in prisma.schema file
+- Add the database connection url in prisma/schema.prisma file
+  - URL = mysql://USER:PASSWORD@HOST:PORT/DATABASE
+ 
+```bash
+# Create database tables with Prisma Migrate
+$ npx prisma migrate dev --name init
 
 
 ## Running the app
